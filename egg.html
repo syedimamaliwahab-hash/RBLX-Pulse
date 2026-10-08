@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Steal An Egg | RBLX Pulse</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #070707;
+            color: white;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            height: 72px;
+            padding: 0 7%;
+            background: rgba(8, 8, 8, 0.96);
+            border-bottom: 1px solid #222;
+
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            backdrop-filter: blur(12px);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #72d17d;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .back-btn {
+            margin-left: auto;
+
+            color: white;
+            text-decoration: none;
+
+            border: 1px solid #333;
+
+            padding: 9px 15px;
+
+            border-radius: 8px;
+
+            font-size: 13px;
+
+            transition: 0.2s;
+        }
+
+        .back-btn:hover {
+            background: white;
+            color: black;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 520px;
+
+            padding: 90px 8%;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 75% 40%,
+                    rgba(83, 171, 92, 0.25),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 25% 80%,
+                    rgba(70, 110, 75, 0.12),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #070707,
+                    #0b120c,
+                    #070707
+                );
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .game-label {
+            color: #72d17d;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            letter-spacing: 3px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 9vw, 100px);
+
+            line-height: 0.9;
+
+            margin: 20px 0;
+
+            letter-spacing: -6px;
+        }
+
+        .hero h1 span {
+            color: #72d17d;
+        }
+
+        .hero-description {
+            max-width: 650px;
+
+            color: #999;
+
+            line-height: 1.7;
+
+            font-size: 16px;
+        }
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            text-decoration: none;
+
+            padding: 13px 20px;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .primary-btn {
+            background: white;
+            color: black;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .secondary-btn {
+            border: 1px solid #333;
+            color: white;
+        }
+
+        .secondary-btn:hover {
+            background: #161616;
+        }
+
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            padding: 25px 8%;
+
+            background: #0c0c0c;
+
+            border-top: 1px solid #1d1d1d;
+            border-bottom: 1px solid #1d1d1d;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .stat {
+            padding: 18px;
+
+            border-right: 1px solid #222;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-label {
+            color: #666;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .stat-value {
+            display: block;
+
+            margin-top: 7px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 85px 8%;
+        }
+
+        .section-label {
+            color: #72d17d;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+        }
+
+        .section-title {
+            font-size: 42px;
+
+            margin-top: 8px;
+
+            margin-bottom: 10px;
+
+            letter-spacing: -2px;
+        }
+
+        .section-subtitle {
+            color: #777;
+
+            line-height: 1.6;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           UPDATE CARD
+        ========================= */
+
+        .update-card {
+            background:
+                linear-gradient(
+                    135deg,
+                    #111,
+                    #101810
+                );
+
+            border: 1px solid #29452d;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+
+            transition: 0.25s;
+        }
+
+        .update-card:hover {
+            transform: translateY(-4px);
+
+            border-color: #4d8754;
+        }
+
+        .update-icon {
+            width: 65px;
+            height: 65px;
+
+            border-radius: 15px;
+
+            background: #172319;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 30px;
+
+            margin-bottom: 18px;
+        }
+
+        .update-card h3 {
+            font-size: 28px;
+
+            margin-bottom: 10px;
+        }
+
+        .update-card p {
+            color: #888;
+
+            max-width: 650px;
+
+            line-height: 1.7;
+        }
+
+        .new-badge {
+            background: #72d17d;
+
+            color: #071008;
+
+            padding: 9px 14px;
+
+            border-radius: 7px;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================
+           MAP
+        ========================= */
+
+        .map-container {
+            background: #0c0c0c;
+
+            border: 1px solid #292929;
+
+            border-radius: 22px;
+
+            padding: 35px;
+
+            overflow: hidden;
+        }
+
+        .map-header {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding-bottom: 25px;
+
+            border-bottom: 1px solid #222;
+
+            margin-bottom: 30px;
+        }
+
+        .map-header span {
+            color: #666;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .map-header strong {
+            color: #aaa;
+
+            font-size: 12px;
+        }
+
+        .map-route {
+            position: relative;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 5px 0;
+        }
+
+        /* THE LINE */
+
+        .map-route::before {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 20px;
+
+            bottom: 20px;
+
+            width: 3px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #303030,
+                    #72d17d,
+                    #303030
+                );
+
+            transform: translateX(-50%);
+        }
+
+
+        /* =========================
+           BIOME
+        ========================= */
+
+        .biome {
+            position: relative;
+
+            width: 47%;
+
+            margin-bottom: 22px;
+
+            padding: 20px 22px;
+
+            background: #121212;
+
+            border: 1px solid #292929;
+
+            border-radius: 15px;
+
+            z-index: 2;
+
+            transition: 0.25s;
+        }
+
+        .biome:nth-child(odd) {
+            margin-right: auto;
+        }
+
+        .biome:nth-child(even) {
+            margin-left: auto;
+        }
+
+        .biome:hover {
+            border-color: #555;
+
+            transform: translateY(-3px);
+        }
+
+        .biome-number {
+            color: #555;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .biome-icon {
+            font-size: 28px;
+
+            margin: 8px 0;
+        }
+
+        .biome h3 {
+            font-size: 20px;
+
+            margin-bottom: 6px;
+        }
+
+        .biome p {
+            color: #888;
+
+            font-size: 13px;
+
+            margin-bottom: 7px;
+        }
+
+        .biome small {
+            color: #555;
+
+            font-size: 11px;
+        }
+
+
+        /* SPEED */
+
+        .speed {
+            display: inline-block;
+
+            margin-top: 12px;
+
+            padding: 6px 9px;
+
+            background: #1b1b1b;
+
+            border: 1px solid #292929;
+
+            border-radius: 6px;
+
+            color: #aaa;
+
+            font-size: 10px;
+
+            font-weight: bold;
+        }
+
+
+        /* GUARDIAN */
+
+        .guardian {
+            display: block;
+
+            margin-top: 8px;
+
+            color: #666;
+
+            font-size: 11px;
+        }
+
+        .guardian strong {
+            color: #999;
+        }
+
+
+        /* CURRENT END */
+
+        .endgame {
+            border-color: #725c25;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #17140b,
+                    #111
+                );
+        }
+
+        .endgame .biome-number {
+            color: #d4ad4c;
+        }
+
+        .endgame h3 {
+            color: #e0c16c;
+        }
+
+
+        /* =========================
+           LOCATIONS
+        ========================= */
+
+        .location-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .location-card {
+            background: #101010;
+
+            border: 1px solid #252525;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            transition: 0.25s;
+        }
+
+        .location-card:hover {
+            border-color: #444;
+
+            transform: translateY(-3px);
+        }
+
+        .location-number {
+            color: #555;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .location-card h3 {
+            margin: 12px 0 9px;
+
+            font-size: 20px;
+        }
+
+        .location-card p {
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           SECRETS
+        ========================= */
+
+        .secret-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .secret-card {
+            background: #101010;
+
+            border: 1px solid #252525;
+
+            border-radius: 15px;
+
+            padding: 28px;
+
+            transition: 0.25s;
+        }
+
+        .secret-card:hover {
+            border-color: #444;
+
+            transform: translateY(-3px);
+        }
+
+        .secret-tag {
+            color: #ff5757;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        .secret-card h3 {
+            margin: 12px 0;
+
+            font-size: 20px;
+        }
+
+        .secret-card p {
+            color: #777;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 8%;
+
+            border-top: 1px solid #222;
+
+            color: #555;
+
+            font-size: 12px;
+
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                padding: 0 5%;
+
+                gap: 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+            .hero h1 {
+                letter-spacing: -4px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+
+                padding: 15px 6%;
+            }
+
+            .stat {
+                border-right: none;
+
+                border-bottom: 1px solid #222;
+            }
+
+            .update-card {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            .location-grid,
+            .secret-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container {
+                padding: 20px 12px;
+            }
+
+            .map-header strong {
+                display: none;
+            }
+
+            .map-route::before {
+                left: 18px;
+            }
+
+            .biome,
+            .biome:nth-child(odd),
+            .biome:nth-child(even) {
+                width: calc(100% - 35px);
+
+                margin-left: 35px;
+
+                margin-right: 0;
+            }
+
+            .biome:hover {
+                transform: translateX(3px);
+            }
+
+            footer {
+                flex-direction: column;
+
+                gap: 10px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            RBLX Pulse<span>.</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Trending
+            </a>
+
+            <a href="index.html">
+                Games
+            </a>
+
+            <a href="#update">
+                Updates
+            </a>
+
+            <a href="#secrets">
+                Secrets
+            </a>
+
+        </nav>
+
+        <a href="index.html" class="back-btn">
+            ← Back
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="game-label">
+                ROBLOX GAME DATABASE
+            </span>
+
+            <h1>
+                Steal An
+                <span>Egg</span>
+            </h1>
+
+            <p class="hero-description">
+
+                Your complete Steal An Egg
+                information hub.
+
+                Explore the current map,
+                discover biomes, check speed
+                requirements and find secrets.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#update" class="primary-btn">
+                    Latest Update →
+                </a>
+
+                <a href="#map" class="secondary-btn">
+                    View Map
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATS
+    ========================= -->
+
+    <div class="stats">
+
+        <div class="stat">
+
+            <span class="stat-label">
+                STATUS
+            </span>
+
+            <span class="stat-value">
+                🔥 Trending
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span class="stat-label">
+                CURRENT MAP
+            </span>
+
+            <span class="stat-value">
+                13 Areas
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span class="stat-label">
+                ENDGAME
+            </span>
+
+            <span class="stat-value">
+                Enchanted Forest
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span class="stat-label">
+                DATABASE
+            </span>
+
+            <span class="stat-value">
+                Live
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         LATEST UPDATE
+    ========================= -->
+
+   <section id="update">
+
+    <span class="section-label">
+        01 — LATEST UPDATE
+    </span>
+
+    <h2 class="section-title">
+        Enchanted Forest
+    </h2>
+
+    <p class="section-subtitle">
+        The newest biome added to Steal An Egg.
+    </p>
+
+    <div class="update-card">
+
+        <div>
+
+            <div class="update-icon">
+                🌳
+            </div>
+
+            <h3>
+                Enchanted Forest
+            </h3>
+
+            <p>
+                Update 7 introduces the Enchanted Forest,
+                a new biome with 8 new pets, a mysterious
+                Enchanted Tree, Wisp quests and new secrets
+                to discover.
+            </p>
+
+        </div>
+
+        <span class="new-badge">
+            NEW UPDATE
+        </span>
+
+    </div>
+
+</section>
+
+
+
+    <!-- =========================
+         CURRENT MAP
+    ========================= -->
+
+    <section id="map">
+
+        <span class="section-label">
+            02 — CURRENT WORLD
+        </span>
+
+        <h2 class="section-title">
+            Steal An Egg Map
+        </h2>
+
+        <p class="section-subtitle">
+            Current reported progression from the starting
+            Forest to the Angels & Demons endgame area.
+        </p>
+
+
+        <div class="map-container">
+
+            <div class="map-header">
+
+                <span>
+                    START
+                </span>
+
+                <strong>
+                    STEAL AN EGG — CURRENT MAP
+                </strong>
+
+                <span>
+                    ENDGAME
+                </span>
+
+            </div>
+
+
+            <div class="map-route">
+
+
+                <!-- 01 -->
+
+                <div class="biome">
+
+                    <div class="biome-number">
+                        01
+                    </div>
+
+                   <div class="biome-icon">
+    <img src="forest.jpg" alt="Forest">
+</div>
+
+                    <h3>
+                        Forest
+                    </h3>
+
+                    <p>
+                        Starting area
+                    </p>
+
+                    <small>
+                        Forest Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: START
+                    </span>
+
+                    <span class="guardian">
+                        Guardian:
+                        <strong>Chicken</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 02 -->
+
+                <div class="biome">
+
+                    <div class="biome-number">
+                        02
+                    </div>
+
+                    <div class="biome-icon">
+    <img src="lake.jpg" alt="Lake">
+</div>
+
+                    <h3>
+                        Lake
+                    </h3>
+
+                    <p>
+                        First progression zone
+                    </p>
+
+                    <small>
+                        Lake Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: ~900
+                    </span>
+
+                    <span class="guardian">
+                        Guardian:
+                        <strong>Swan</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 03 -->
+
+                <div class="biome">
+
+                    <div class="biome-number">
+                        03
+                    </div>
+
+                   <div class="biome-icon">
+    <img src="desert.jpg" alt="Desert">
+</div>
+
+                    <h3>
+                        Desert
+                    </h3>
+
+                    <p>
+                        Dry desert zone
+                    </p>
+
+                    <small>
+                        Desert Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: ~10K
+                    </span>
+
+                    <span class="guardian">
+                        Guardian:
+                        <strong>Scorpion</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 04 -->
+
+                <div class="biome">
+
+                    <div class="biome-number">
+                        04
+                    </div>
+
+                   <div class="biome-icon">
+    <img src="jungle.jpg" alt="Jungle">
+</div>
+
+                    <h3>
+                        Jungle
+                    </h3>
+
+                    <p>
+                        Jungle zone
+                    </p>
+
+                    <small>
+                        Jungle Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: ~40K
+                    </span>
+
+                    <span class="guardian">
+                        Guardian:
+                        <strong>Tiger</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 05 -->
+
+                <div class="biome">
+
+                    <div class="biome-number">
+                        05
+                    </div>
+
+                  <div class="biome-icon">
+    <img src="snow.jpg" alt="Snow">
+</div>
+
+                    <h3>
+                        Snow
+                    </h3>
+
+                    <p>
+                        Frozen biome
+                    </p>
+
+                    <small>
+                        Snow Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: ~170K
+                    </span>
+
+                    <span class="guardian">
+                        Guardian:
+                        <strong>Yeti</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 06 -->
+
+                <div class="biome">
+
+                    <div class="biome-number">
+                        06
+                    </div>
+
+                  <div class="biome-icon">
+    <img src="volcano.jpg" alt="Volcano">
+</div>
+
+                    <h3>
+                        Volcano
+                    </h3>
+
+                    <p>
+                        Volcanic region
+                    </p>
+
+                    <small>
+                        Volcano Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: ~700K
+                    </span>
+
+                    <span class="guardian">
+                        Guardian:
+                        <strong>Hellhound</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 07 -->
+
+                <div class="biome">
+
+                    <div class="biome-number">
+                        07
+                    </div>
+
+                   <div class="biome-icon">
+    <img src="abyss-ocean.jpg" alt="Abyss Ocean">
+</div>
+
+                    <h3>
+                        Abyss Ocean
+                    </h3>
+
+                    <p>
+                        Deep ocean area
+                    </p>
+
+                    <small>
+                        Abyss Ocean Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: ~2.5M
+                    </span>
+
+                    <span class="guardian">
+                        Guardian:
+                        <strong>Moby</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 08 -->
+
+                <div class="biome">
+
+                    <div class="biome-number">
+                        08
+                    </div>
+
+                 <div class="biome-icon">
+    <img src="prehistoric.jpg" alt="Prehistoric">
+</div>
+
+                    <h3>
+                        Prehistoric
+                    </h3>
+
+                    <p>
+                        Ancient dinosaur zone
+                    </p>
+
+                    <small>
+                        Prehistoric Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: ~17M
+                    </span>
+
+                    <span class="guardian">
+                        Guardian:
+                        <strong>T-Rex</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 09 -->
+
+                <div class="biome">
+
+                    <div class="biome-number">
+                        09
+                    </div>
+
+                   <div class="biome-icon">
+    <img src="cosmic.jpg" alt="Cosmic">
+</div>
+
+                    <h3>
+                        Cosmic
+                    </h3>
+
+                    <p>
+                        Cosmic endgame zone
+                    </p>
+
+                    <small>
+                        Cosmic Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: ~700M
+                    </span>
+
+                    <span class="guardian">
+                        Guardian:
+                        <strong>Dragon</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 10 -->
+
+                <div class="biome">
+
+                    <div class="biome-number">
+                        10
+                    </div>
+
+                    <div class="biome-icon">
+                    <img src="cherry-blossom.jpg" alt="Cherry Blossom">
+                    </div>
+
+                    <h3>
+                        Cherry Blossom
+                    </h3>
+
+                    <p>
+                        Sakura-themed area
+                    </p>
+
+                    <small>
+                        Cherry Blossom Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: HIGH
+                    </span>
+
+                    <span class="guardian">
+                        Area:
+                        <strong>Sakura</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 11 -->
+
+                <div class="biome endgame">
+
+                    <div class="biome-number">
+                        11 — ENDGAME
+                    </div>
+
+                   <div class="biome-icon">
+                   <img src="https://www.eldorado.gg/blog/wp-content/uploads/2026/08/Gorilla-King-300x300.webp" alt="Titan Temple" style="width:300px; height:270px; object-fit:cover;">
+                   </div>
+
+                    <h3>
+                        Titan Temple
+                    </h3>
+
+                    <p>
+                        Monster endgame area
+                    </p>
+
+                    <small>
+                        Titan Temple Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: ~7B
+                    </span>
+
+                    <span class="guardian">
+                        Guardian:
+                        <strong>Gorilla King</strong>
+                    </span>
+
+                </div>
+
+
+                <!-- 12 -->
+
+                <div class="biome endgame">
+
+                    <div class="biome-number">
+                        12 — CURRENT END
+                    </div>
+
+                  <div class="biome-icon">
+    <img src="demon-egg.jpg" alt="Demon Egg">
+</div>
+
+<div class="biome-icon">
+    <img src="angel-egg.jpg" alt="Angel Egg">
+</div>
+
+                    <h3>
+                        Angels & Demons
+                    </h3>
+
+                    <p>
+                        Current reported final area
+                    </p>
+
+                    <small>
+                        Angel Egg / Demon Egg
+                    </small>
+
+                    <span class="speed">
+                        SPEED: ~20B*
+                    </span>
+
+                    <span class="guardian">
+                        Status:
+                        <strong>Endgame</strong>
+                    </span>
+
+
+                    
+                </div>
+<div class="biome enchanted">
+    <div class="biome-number">
+        10 — ENCHANTED
+    </div>
+
+    <div class="biome-icon">
+        
+    </div>
+
+    <h3>Enchanted Forest</h3>
+
+    <p>Magical forest biome</p>
+
+    <small>Enchanted Forest Egg</small>
+</div>
+            </div>
+
+        </div>
+        
+
+    </section>
+
+
+    <!-- =========================
+         LOCATIONS
+    ========================= -->
+
+    <section>
+
+        <span class="section-label">
+            03 — LOCATIONS
+        </span>
+
+        <h2 class="section-title">
+            Important Areas
+        </h2>
+
+        <p class="section-subtitle">
+            Places worth knowing while exploring the map.
+        </p>
+
+
+        <div class="location-grid">
+
+
+            <div class="location-card">
+
+                <span class="location-number">
+                    LOCATION 01
+                </span>
+
+                <h3>
+                    🏠 Player Base
+                </h3>
+
+                <p>
+                    The starting point where you
+                    return with eggs and manage
+                    your progress.
+                </p>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <span class="location-number">
+                    LOCATION 02
+                </span>
+
+                <h3>
+                    🥚 Egg Nests
+                </h3>
+
+                <p>
+                    Egg nests are positioned
+                    throughout the different
+                    biome areas.
+                </p>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <span class="location-number">
+                    LOCATION 03
+                </span>
+
+                <h3>
+                    🏛️ Titan Temple
+                </h3>
+
+                <p>
+                    One of the major endgame areas
+                    and home of the Monster Egg.
+                </p>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <span class="location-number">
+                    LOCATION 04
+                </span>
+
+                <h3>
+                    👼😈 Angels & Demons
+                </h3>
+
+                <p>
+                    The currently reported final
+                    area beyond Titan Temple.
+                </p>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <span class="location-number">
+                    LOCATION 05
+                </span>
+
+                <h3>
+                    🏃 Treadmill
+                </h3>
+
+                <p>
+                    Build Speed so you can travel
+                    further into the map.
+                </p>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <span class="location-number">
+                    LOCATION 06
+                </span>
+
+                <h3>
+                    🥚 Hatch Areas
+                </h3>
+
+                <p>
+                    Bring stolen eggs back and
+                    hatch them to grow your pet
+                    collection.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SECRETS
+    ========================= -->
+
+    <section id="secrets">
+
+        <span class="section-label">
+            04 — DISCOVERIES
+        </span>
+
+        <h2 class="section-title">
+            Secrets & Discoveries
+        </h2>
+
+        <p class="section-subtitle">
+            Things worth investigating around the current map.
+        </p>
+
+
+        <div class="secret-grid">
+
+
+            <div class="secret-card">
+
+                <span class="secret-tag">
+                    DISCOVERY #01
+                </span>
+
+                <h3>
+                    🥚 Egg Spawn Cycles
+                </h3>
+
+                <p>
+                    Standard biome eggs are reported
+                    to refresh on a repeating cycle,
+                    so checking nests regularly can
+                    help you find new eggs.
+                </p>
+
+            </div>
+
+
+            <div class="secret-card">
+
+                <span class="secret-tag">
+                    DISCOVERY #02
+                </span>
+
+                <h3>
+                    🏃 Speed Progression
+                </h3>
+
+                <p>
+                    Speed becomes increasingly
+                    important as you travel through
+                    the later biomes.
+                </p>
+
+            </div>
+
+
+            <div class="secret-card">
+
+                <span class="secret-tag">
+                    DISCOVERY #03
+                </span>
+
+                <h3>
+                    🏛️ Titan Temple
+                </h3>
+
+                <p>
+                    Titan Temple is the major Monster
+                    endgame zone immediately before
+                    the currently reported Angels &
+                    Demons area.
+                </p>
+
+            </div>
+
+
+            <div class="secret-card">
+
+                <span class="secret-tag">
+                    DISCOVERY #04
+                </span>
+
+                <h3>
+                    👼😈 Angels & Demons
+                </h3>
+
+                <p>
+                    The newest reported endgame area.
+                    Its exact mechanics and Speed gate
+                    can change with updates, so treat
+                    community numbers as approximate.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <span>
+            © 2026 RBLX Pulse
+        </span>
+
+        <span>
+            Steal An Egg Database
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>

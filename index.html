@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syed</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            RBLX Pulse<span>.</span>
+        </div>
+
+        <nav>
+            <a href="#">Trending</a>
+            <a href="#">Games</a>
+            <a href="#">Updates</a>
+            <a href="#">Secrets</a>
+        </nav>
+
+        <div class="search">
+            <input type="text" placeholder="Search Roblox games...">
+            <button>🔍</button>
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="trending-number">🔥 #1 TRENDING RIGHT NOW</p>
+
+                <h1>STEAL AN EGG</h1>
+
+                <p class="description">
+                    Discover what's trending on Roblox, find rare secrets,
+                    check game updates and explore the latest discoveries.
+                </p> 
+
+                <div class="stats">
+
+                    <div>
+                        <strong>🔥 TRENDING</strong>
+                        <span>Right Now</span>
+                    </div>
+
+                    <div>
+                        <strong>👥 PLAYERS</strong>
+                        <span>Live</span>
+                    </div>
+
+                    <div>
+                        <strong>⭐ RATING</strong>
+                        <span>Popular</span>
+                    </div>
+
+                </div>
+
+                <button class="explore-btn">
+                    EXPLORE GAME →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRENDING GAMES -->
+        <section class="games-section">
+
+            <div class="section-title">
+
+                <div>
+                    <p>WHAT'S HOT</p>
+                    <h2>🔥 TRENDING GAMES</h2>
+                </div>
+
+                <button>VIEW ALL →</button>
+
+            </div>
+
+
+         <div class="game-grid">
+
+  <div class="game-card" onclick="window.location.href='game.html'">
+    <div class="game-image image-one"></div>
+    <span>#1</span>
+    <h3>Steal an Egg</h3>
+    <p>🔥 Trending now</p>
+</div>
+
+
+             
+
+        </section>
+
+       
+
+
+
+    
+
+
+   
+    <section class="database-controls">
+
+    <div class="database-search">
+        <input
+            type="text"
+            id="eggSearch"
+            placeholder="Search pets, eggs or rarities..."
+        >
+    </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">ALL</button>
+        <button class="filter-btn" data-filter="Common">COMMON</button>
+        <button class="filter-btn" data-filter="Rare">RARE</button>
+        <button class="filter-btn" data-filter="Epic">EPIC</button>
+        <button class="filter-btn" data-filter="Legendary">LEGENDARY</button>
+        <button class="filter-btn" data-filter="Mythic">MYTHIC</button>
+        <button class="filter-btn" data-filter="Cosmic">COSMIC</button>
+        <button class="filter-btn" data-filter="Secret">SECRET</button>
+        <button class="filter-btn" data-filter="Eternal">ETERNAL</button>
+        <button class="filter-btn" data-filter="Divine">DIVINE</button>
+    </div>
+
+</section>
+<div class="sort-controls">
+    <label for="raritySort">SORT:</label>
+<select id="raritySort">S
+    <option value="default">Default</option>
+    <option value="rarest">Rarest → Uncommon</option>
+    <option value="common">Common → Rarest</option>
+</select>
+</div>
+<section class="egg-database">
+
+
+
+    <p class="section-label">STEAL AN EGG DATABASE</p>
+    <h2>🥚 EGGS & HATCHES</h2>
+    <p class="section-subtitle">
+        See what you can get from each egg.
+    </p>
+
+<!-- ENCHANTED FOREST -->
+
+
+
+<!-- FUSION EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image fusion-egg">
+        <img src="fusion.jpg" alt="Fusion Egg">
+    </div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>SECRET SHRINE</span>
+                <h3>Fusion Egg</h3>
+            </div>
+
+            <span class="egg-tag">FUSION</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Result</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Equinox</span>
+                <span class="eternal">Eternal</span>
+                <span>$1.8B/s*</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Aetheron</span>
+                <span class="divine">Divine</span>
+                <span>$6.9B/s*</span>
+            </div>
+
+        </div>
+
+        <p class="fusion-note">
+            *Community reference values. Actual income can vary with size
+            and mutations.
+        </p>
+
+    </div>
+</div>
+<!-- FOREST EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image forest-egg">
+        <img src="forest.jpg" alt="Forest Egg">
+    </div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>FOREST</span>
+                <h3>Forest Egg</h3>
+            </div>
+
+            <span class="egg-tag">FOREST</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Chicken</span>
+                <span>Common</span>
+                <span>$1/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Dog</span>
+                <span>Common</span>
+                <span>$2/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Bird</span>
+                <span>Uncommon</span>
+                <span>$8/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Owl</span>
+                <span>Rare</span>
+                <span>$35/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Raccoon</span>
+                <span>Rare</span>
+                <span>$45/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Fox</span>
+                <span>Epic</span>
+                <span>$180/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Bear</span>
+                <span>Epic</span>
+                <span>$240/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Brr Brr Patapim</span>
+                <span>Legendary</span>
+                <span>$1.8K/s</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- LAKE EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image lake-egg">
+        <img src="lake.jpg" alt="Lake Egg">
+    </div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>LAKE</span>
+                <h3>Lake Egg</h3>
+            </div>
+
+            <span class="egg-tag">LAKE</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Frog</span>
+                <span>Common</span>
+                <span>$3/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Duckling</span>
+                <span>Unconfirmed</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Catfish</span>
+                <span>Uncommon</span>
+                <span>$12/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Turtle</span>
+                <span>Rare</span>
+                <span>$60/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Trulimero Trulicina</span>
+                <span>Epic</span>
+                <span>$260/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Swan</span>
+                <span>Unconfirmed</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Axolotl</span>
+                <span>Unconfirmed</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Leviathan</span>
+                <span>Unconfirmed</span>
+                <span>TBA</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- DESERT EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image desert-egg">
+        <img src="desert.jpg" alt="Desert Egg">
+    </div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>DESERT</span>
+                <h3>Desert Egg</h3>
+            </div>
+
+            <span class="egg-tag">DESERT</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Sand Mouse</span>
+                <span>Common</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Desert Fox</span>
+                <span>Uncommon</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Scorpion</span>
+                <span>Rare</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Sand Cat</span>
+                <span>Rare</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Camel</span>
+                <span>Epic</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Desert King</span>
+                <span>Legendary</span>
+                <span>TBA</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- JUNGLE EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image jungle-egg">
+        <img src="jungle.jpg" alt="Jungle Egg">
+    </div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>JUNGLE</span>
+                <h3>Jungle Egg</h3>
+            </div>
+
+            <span class="egg-tag">JUNGLE</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Jungle Frog</span>
+                <span>Common</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Parrot</span>
+                <span>Uncommon</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Monkey</span>
+                <span>Rare</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Toucan</span>
+                <span>Rare</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Jaguar</span>
+                <span>Epic</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Jungle Guardian</span>
+                <span>Legendary</span>
+                <span>TBA</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- SNOW EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image snow-egg">
+        <img src="snow.jpg" alt="Snow Egg">
+    </div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>SNOW</span>
+                <h3>Snow Egg</h3>
+            </div>
+
+            <span class="egg-tag">SNOW</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Penguin</span>
+                <span class="rare">Rare</span>
+                <span>$140/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Walrus</span>
+                <span class="epic">Epic</span>
+                <span>$600/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Polar Bear</span>
+                <span class="legendary">Legendary</span>
+                <span>$7K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Sabertooth Tiger</span>
+                <span class="mythic">Mythic</span>
+                <span>$35K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Mammoth</span>
+                <span class="mythic">Mythic</span>
+                <span>$42K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>King Mammoth</span>
+                <span class="cosmic">Cosmic</span>
+                <span>$400K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Yeti</span>
+                <span class="secret">Secret</span>
+                <span>$5M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Ice Dragon</span>
+                <span class="eternal">Eternal</span>
+                <span>$65M/s</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- VOLCANO EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image volcano-egg">
+        <img src="volcano.jpg" alt="Volcano Egg">
+    </div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>VOLCANO</span>
+                <h3>Volcano Egg</h3>
+            </div>
+
+            <span class="egg-tag">VOLCANO</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Lava Gecko</span>
+                <span class="rare">Rare</span>
+                <span>$180/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Lava Frog</span>
+                <span class="epic">Epic</span>
+                <span>$850/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Flaming Bull</span>
+                <span class="legendary">Legendary</span>
+                <span>$9.5K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Lava Iguana</span>
+                <span class="legendary">Legendary</span>
+                <span>$11K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Chillin Chilli</span>
+                <span class="mythic">Mythic</span>
+                <span>$55K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Cerberus</span>
+                <span class="secret">Secret</span>
+                <span>$8M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Phoenix</span>
+                <span class="eternal">Eternal</span>
+                <span>$85M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Lava Dragon</span>
+                <span class="eternal">Eternal</span>
+                <span>$100M/s</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- ABYSS OCEAN EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image abyss-ocean-egg">
+    <img src="abyss-ocean.jpg" alt="Abyss Ocean Egg">
+</div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>ABYSS OCEAN</span>
+                <h3>Abyss Ocean Egg</h3>
+            </div>
+
+            <span class="egg-tag">OCEAN</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Parrotfish</span>
+                <span class="rare">Rare</span>
+                <span>$220/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Swordfish</span>
+                <span class="epic">Epic</span>
+                <span>$1.1K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Shark</span>
+                <span class="legendary">Legendary</span>
+                <span>$15K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Orca</span>
+                <span class="mythic">Mythic</span>
+                <span>$80K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Whale Shark</span>
+                <span class="cosmic">Cosmic</span>
+                <span>$700K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Beluga Whale</span>
+                <span class="cosmic">Cosmic</span>
+                <span>$850K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Kraken</span>
+                <span class="secret">Secret</span>
+                <span>$15M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>El Maja</span>
+                <span class="eternal">Eternal</span>
+                <span>$130M/s</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- PREHISTORIC EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image prehistoric-egg">
+    <img src="prehistoric.jpg" alt="Prehistoric Egg">
+</div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>PREHISTORIC</span>
+                <h3>Prehistoric Egg</h3>
+            </div>
+
+            <span class="egg-tag">DINOSAUR</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Dodo</span>
+                <span class="rare">Rare</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Pterodactyl</span>
+                <span class="legendary">Legendary</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Ankylosaurus</span>
+                <span class="mythic">Mythic</span>
+                <span>$120K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Triceratops</span>
+                <span class="cosmic">Cosmic</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Bronto</span>
+                <span class="cosmic">Cosmic</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Tralaledon</span>
+                <span class="secret">Secret</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>TRex</span>
+                <span class="secret">Secret</span>
+                <span>TBA</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Mosasaurus</span>
+                <span class="eternal">Eternal</span>
+                <span>$180M/s</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- COSMIC EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image cosmic-egg">
+    <img src="cosmic.jpg" alt="Cosmic Egg">
+</div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>COSMIC</span>
+                <h3>Cosmic Egg</h3>
+            </div>
+
+            <span class="egg-tag">COSMIC</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Centapede</span>
+                <span class="epic">Epic</span>
+                <span>$1.5K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Cosmic Gecko</span>
+                <span class="legendary">Legendary</span>
+                <span>$30K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Cosmic Gorilla</span>
+                <span class="mythic">Mythic</span>
+                <span>$180K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>La Vacca Saturno Saturnita</span>
+                <span class="cosmic">Cosmic</span>
+                <span>$2.2M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Cosmic Skeleton Boss</span>
+                <span class="secret">Secret</span>
+                <span>$45M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Cosmic Dragon</span>
+                <span class="secret">Secret</span>
+                <span>$60M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Eternal Lunar Dragon</span>
+                <span class="eternal">Eternal</span>
+                <span>$250M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Unicorn</span>
+                <span class="divine">Divine</span>
+                <span>$1B/s</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- CHERRY BLOSSOM EGG -->
+<div class="egg-entry">
+
+   <div class="egg-image titan-egg">
+    <img src="cherry-blossom.jpg" alt="Cherry Blossom Egg">
+</div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>CHERRY BLOSSOM</span>
+                <h3>Cherry Blossom Egg</h3>
+            </div>
+
+            <span class="egg-tag">SAKURA</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Crane</span>
+                <span class="epic">Epic</span>
+                <span>$4K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Salamander</span>
+                <span class="legendary">Legendary</span>
+                <span>$74K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Red Panda</span>
+                <span class="mythic">Mythic</span>
+                <span>$450K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Snowy Owl</span>
+                <span class="cosmic">Cosmic</span>
+                <span>$7.5M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Koi</span>
+                <span class="cosmic">Cosmic</span>
+                <span>$12M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Stag</span>
+                <span class="secret">Secret</span>
+                <span>$145M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Oni Tiger</span>
+                <span class="eternal">Eternal</span>
+                <span>$600M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Kitsune</span>
+                <span class="divine">Divine</span>
+                <span>TBC</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- TITAN TEMPLE -->
+<div class="egg-entry">
+
+    <div class="egg-image titan-egg">
+    <img src="titan-temple.jpg" alt="Titan Temple Egg">
+</div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>TITAN TEMPLE</span>
+                <h3>Titan Temple Egg</h3>
+            </div>
+
+            <span class="egg-tag">MONSTER</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Spideron</span>
+                <span class="legendary">Legendary</span>
+                <span>$95K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Crustacia</span>
+                <span class="legendary">Legendary</span>
+                <span>$130K/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Bladehide</span>
+                <span class="mythic">Mythic</span>
+                <span>$11M/s*</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Mantaris</span>
+                <span class="cosmic">Cosmic</span>
+                <span>$12M/s*</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Rhinotaur</span>
+                <span class="cosmic">Cosmic</span>
+                <span>$17.5M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Mutant Shark</span>
+                <span class="secret">Secret</span>
+                <span>$215M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Gorilla King</span>
+                <span class="eternal">Eternal</span>
+                <span>$880M/s</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Nightflame</span>
+                <span class="divine">Divine</span>
+                <span>TBC</span>
+            </div>
+
+        </div>
+
+        <p class="fusion-note">
+            *Some community sources disagree on these values.
+            Exact hatch odds are not verified.
+        </p>
+
+    </div>
+</div>
+<!-- ANGELS SIDE -->
+    <div class="egg-entry">
+
+          <div class="egg-image angels-egg">
+    <img src="angel-egg.jpg" alt="Angel Egg">
+</div>
+
+        <div class="egg-info">
+
+            <div class="egg-title">
+                <div>
+                    <span>ANGELS SIDE</span>
+                    <h3>Angel Egg</h3>
+                </div>
+
+              
+
+                <span class="egg-tag">ANGELS</span>
+            </div>
+
+            <div class="pet-table">
+
+                <div class="pet-header">
+                    <span>Pet</span>
+                    <span>Rarity</span>
+                    <span>Money / Sec</span>
+                </div>
+
+                <div class="pet-row">
+                    <span>Light Dove</span>
+                    <span class="legendary">Legendary</span>
+                    <span>$225K/s</span>
+                </div>
+
+                <div class="pet-row">
+                    <span>Winged Lamb</span>
+                    <span class="mythic">Mythic</span>
+                    <span>$1.2M/s</span>
+                </div>
+
+                <div class="pet-row">
+                    <span>Sacred Moth</span>
+                    <span class="cosmic">Cosmic</span>
+                    <span>$16M/s</span>
+                </div>
+
+                <div class="pet-row">
+                    <span>Holy Peacock</span>
+                    <span class="cosmic">Cosmic</span>
+                    <span>$25M/s</span>
+                </div>
+
+                <div class="pet-row">
+                    <span>Pure Jellyfish</span>
+                    <span class="secret">Secret</span>
+                    <span>$225M/s</span>
+                </div>
+
+                <div class="pet-row">
+                    <span>Centaur</span>
+                    <span class="secret">Secret</span>
+                    <span>$350M/s</span>
+                </div>
+
+                <div class="pet-row">
+                    <span>Pegasus</span>
+                    <span class="eternal">Eternal</span>
+                    <span>—</span>
+                </div>
+
+                <div class="pet-row">
+                    <span>ArchAngel</span>
+                    <span class="divine">Divine</span>
+                    <span>—</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!-- PEGASUS EGG -->
+    <div class="egg-entry">
+
+        <div class="egg-image pegasus-egg">
+            <img src="pegasus.jpg" alt="Pegasus Egg">
+
+        </div>
+        <div class="egg-info">
+
+            <div class="egg-title">
+                <div>
+                    <span>ANGELS SIDE</span>
+                    <h3>Pegasus Egg</h3>
+                </div>
+
+                <span class="egg-tag">ETERNAL</span>
+            </div>
+
+            <div class="pet-table">
+
+                <div class="pet-header">
+                    <span>Pet</span>
+                    <span>Rarity</span>
+                    <span>Money / Sec</span>
+                </div>
+
+                <div class="pet-row">
+                    <span>Pegasus</span>
+                    <span class="eternal">Eternal</span>
+                    <span>$1.3B/s</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- DEMON EGG -->
+<div class="egg-entry">
+
+    <div class="egg-image demon-egg">
+        <img src="demon-egg.jpg" alt="Demon Egg">
+    </div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+            <div>
+                <span>DEMONS SIDE</span>
+                <h3>Demon Egg</h3>
+            </div>
+
+            <span class="egg-tag">DARKNESS</span>
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Flame Sprite</span>
+                <span class="legendary">Legendary</span>
+                <span>Unverified</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Toro</span>
+                <span class="mythic">Mythic</span>
+                <span>Unverified</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Imp</span>
+                <span class="cosmic">Cosmic</span>
+                <span>Unverified</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Demon Hound</span>
+                <span class="cosmic">Cosmic</span>
+                <span>Unverified</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Gargoyle</span>
+                <span class="secret">Secret</span>
+                <span>Unverified</span>
+            </div>
+
+            <div class="pet-row">
+                <span>RazorFang</span>
+                <span class="secret">Secret</span>
+                <span>Unverified</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Skeleton Horse</span>
+                <span class="eternal">Eternal</span>
+                <span>Unverified</span>
+            </div>
+
+            <div class="pet-row">
+                <span>World Burner</span>
+                <span class="divine">Divine</span>
+                <span>Unverified</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="egg-entry">
+
+    <div class="egg-image enchanted-forest-egg">
+        <!-- Add enchanted-forest-egg.jpg later -->
+    </div>
+
+    <div class="egg-info">
+
+        <div class="egg-title">
+
+            <div>
+                <span>ENCHANTED FOREST</span>
+                <h3>🌳 Enchanted Forest Egg</h3>
+            </div>
+
+            <span class="egg-tag">NEW</span>
+
+        </div>
+
+        <div class="pet-table">
+
+            <div class="pet-header">
+                <span>Pet</span>
+                <span>Rarity</span>
+                <span>Money / Sec</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Prism Gecko</span>
+                <span class="legendary">Legendary</span>
+                <span>—</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Petal Beetle</span>
+                <span class="mythic">Mythic</span>
+                <span>—</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Enchanted Bluejay</span>
+                <span class="mythic">Mythic</span>
+                <span>—</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Astral Jackalope</span>
+                <span class="cosmic">Cosmic</span>
+                <span>—</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Spirit Panda</span>
+                <span class="cosmic">Cosmic</span>
+                <span>—</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Starry Fox</span>
+                <span class="secret">Secret</span>
+                <span>—</span>
+            </div>
+
+            <div class="pet-row">
+                <span>Amethyst Runebear</span>
+                <span class="secret">Secret</span>
+                <span>—</span>
+            </div>
+
+            <div class="pet-row">
+                <span>???</span>
+                <span>Unknown</span>
+                <span>—</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    
+
+    
+
+
+
+</section>
+<!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            RBLX Pulse<span>.</span>
+        </div>
+
+        <p>
+            Your hub for trending Roblox games, secrets and updates.
+        </p>
+
+        <p class="copyright">
+            © 2026 RBLX Pulse
+        </p>
+
+    </footer>
+
+     <script src="script.js"></script>
+</body>
+</html>

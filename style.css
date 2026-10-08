@@ -1,0 +1,1702 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #08090d;
+    color: white;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 75px;
+    background: #0d0f14;
+    border-bottom: 1px solid #242730;
+
+    display: flex;
+    align-items: center;
+    padding: 0 6%;
+
+    gap: 45px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #ff3b30;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #aeb2bd;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.search {
+    margin-left: auto;
+    display: flex;
+    height: 40px;
+}
+
+.search input {
+    width: 230px;
+    background: #171920;
+    border: 1px solid #292d37;
+    border-right: none;
+    outline: none;
+
+    color: white;
+    padding: 0 15px;
+    border-radius: 8px 0 0 8px;
+}
+
+.search input::placeholder {
+    color: #777c88;
+}
+
+.search button {
+    width: 45px;
+    border: none;
+    background: #ff3b30;
+    color: white;
+
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #08090d 0%,
+            rgba(8, 9, 13, 0.9) 35%,
+            rgba(8, 9, 13, 0.35) 75%,
+            #08090d 100%
+        ),
+        linear-gradient(
+            0deg,
+            #08090d 0%,
+            transparent 30%,
+            transparent 70%,
+            #08090d 100%
+        ),
+        url("hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.trending-number {
+    color: #ff4b42;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.description {
+    color: #b6bac5;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 570px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.stats div {
+    background: rgba(20, 22, 29, 0.9);
+    border: 1px solid #292d37;
+
+    padding: 13px 18px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stats strong {
+    font-size: 12px;
+}
+
+.stats span {
+    color: #858a96;
+    font-size: 12px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.explore-btn {
+    border: none;
+    background: #ff3b30;
+    color: white;
+
+    padding: 15px 25px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.explore-btn:hover {
+    background: #ff5148;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.games-section,
+.intel {
+    padding: 75px 8%;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 30px;
+}
+
+.section-title p {
+    color: #777d89;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.section-title button {
+    background: transparent;
+    border: 1px solid #30343e;
+    color: #aeb2bd;
+
+    padding: 10px 17px;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.section-title button:hover {
+    color: white;
+    border-color: #555b68;
+}
+
+
+/* =========================
+   GAME CARDS
+========================= */
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.game-card {
+    background: #111319;
+    border: 1px solid #242832;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+    border-color: #414754;
+}
+
+.game-image {
+    height: 190px;
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+
+/*
+   ADD THESE IMAGES TO YOUR FOLDER:
+
+   game1.jpg
+   game2.jpg
+   game3.jpg
+   game4.jpg
+*/
+
+.image-one {
+    background-image: url("steal-an-egg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.image-two {
+    background-image: url("game2.jpg");
+}
+
+.image-three {
+    background-image: url("game3.jpg");
+}
+
+.image-four {
+    background-image: url("game4.jpg");
+}
+
+
+.game-info {
+    padding: 17px;
+}
+
+.game-info span {
+    color: #ff4b42;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.game-info h3 {
+    font-size: 18px;
+    margin: 7px 0;
+}
+
+.game-info p {
+    color: #777d89;
+    font-size: 13px;
+}
+
+
+/* =========================
+   GAME INTEL
+========================= */
+
+.intel {
+    background: #0d0f14;
+    border-top: 1px solid #1e222b;
+    border-bottom: 1px solid #1e222b;
+}
+
+.intel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.intel-card {
+    background: #12151b;
+    border: 1px solid #252a34;
+
+    padding: 25px;
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.intel-card:hover {
+    transform: translateY(-4px);
+    border-color: #3b404b;
+}
+
+.intel-icon {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.intel-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.intel-card p {
+    color: #858a96;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 45px 8%;
+    background: #08090d;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+footer p {
+    color: #6f7480;
+    font-size: 13px;
+}
+
+footer .copyright {
+    margin-left: auto;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intel-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+    }
+
+    .games-section,
+    .intel {
+        padding: 55px 20px;
+    }
+
+    .game-grid,
+    .intel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 24px;
+    }
+
+    footer {
+        padding: 35px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .copyright {
+        margin-left: 0;
+    }
+}
+
+/* =========================
+   GAME DETAILS PAGE
+========================= */
+
+.game-page {
+    min-height: 100vh;
+    padding: 45px 8% 80px;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    display: inline-block;
+    color: #858a96;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    color: white;
+}
+
+
+/* GAME HEADER */
+
+.game-header {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 45px;
+    align-items: center;
+
+    background: #101218;
+    border: 1px solid #272b35;
+    border-radius: 14px;
+
+    padding: 25px;
+    margin-bottom: 70px;
+}
+
+
+/* GAME IMAGE PLACEHOLDER */
+
+.game-header-image {
+    height: 360px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171a22,
+            #0b0c10
+        );
+
+    border: 1px solid #292e39;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* IMAGE WILL BE ADDED LATER */
+
+.game-header-image::after {
+    content: "STEAL A BRAINROT";
+
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+
+    font-size: 24px;
+    font-weight: 900;
+
+    color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* GAME INFORMATION */
+
+.game-header-info {
+    padding: 20px;
+}
+
+.game-header-info h1 {
+    font-size: 52px;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin: 12px 0 20px;
+}
+
+.game-header-info > p:not(.trending-number) {
+    color: #969ba7;
+    line-height: 1.7;
+    font-size: 16px;
+    max-width: 500px;
+}
+
+
+/* GAME STATS */
+
+.game-stats {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.game-stats div {
+    min-width: 100px;
+
+    background: #181b22;
+    border: 1px solid #292e38;
+
+    padding: 14px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.game-stats strong {
+    font-size: 18px;
+}
+
+.game-stats span {
+    color: #777d89;
+    font-size: 11px;
+}
+
+
+/* GAME INTEL */
+
+.game-intel {
+    margin-bottom: 70px;
+}
+
+
+/* DISCOVERY */
+
+.discovery {
+    margin-top: 20px;
+}
+
+.discovery > p {
+    color: #777d89;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.discovery > h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+
+/* DISCOVERY BOX */
+
+.discovery-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171a22,
+            #0e1015
+        );
+
+    border: 1px solid #292e38;
+
+    border-radius: 12px;
+
+    padding: 30px;
+}
+
+.discovery-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.discovery-box p {
+    color: #858a96;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+
+/* SPAWN CHANCE */
+
+.chance {
+    text-align: right;
+    padding-left: 40px;
+}
+
+.chance span {
+    display: block;
+    color: #777d89;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.chance strong {
+    font-size: 42px;
+    color: #ff3b30;
+}
+
+
+/* =========================
+   GAME PAGE MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .game-header {
+        grid-template-columns: 1fr;
+    }
+
+    .game-header-image {
+        height: 300px;
+    }
+
+    .game-header-info h1 {
+        font-size: 42px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .game-page {
+        padding: 30px 20px 60px;
+    }
+
+    .game-header {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .game-header-image {
+        height: 220px;
+    }
+
+    .game-header-info {
+        padding: 10px;
+    }
+
+    .game-header-info h1 {
+        font-size: 34px;
+    }
+
+    .game-stats {
+        flex-wrap: wrap;
+    }
+
+    .discovery-box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .chance {
+        text-align: left;
+        padding-left: 0;
+    }
+
+}
+
+.game-card {
+    color: white;
+    text-decoration: none;
+}
+
+/* =========================
+   STEAL AN EGG
+========================= */
+
+.egg-section {
+    padding: 70px 8%;
+    background: #0d0f14;
+    border-top: 1px solid #242832;
+}
+
+.egg-label {
+    color: #777d89;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.egg-section h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.egg-description {
+    color: #858a96;
+    margin-bottom: 30px;
+}
+
+.egg-feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px;
+
+    background: #12151b;
+    border: 1px solid #292e38;
+    border-radius: 12px;
+}
+
+.secret-label {
+    color: #ff3b30;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.egg-feature h3 {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.egg-feature p {
+    color: #858a96;
+}
+
+.egg-rarity {
+    text-align: right;
+}
+
+.egg-rarity span {
+    display: block;
+    color: #777d89;
+    font-size: 11px;
+}
+
+
+/* =========================
+   PET RARITY DATABASE
+========================= */
+
+.rarity-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.rarity-card {
+    background: #12151b;
+    border: 1px solid #292e38;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.rarity-card:hover {
+    transform: translateY(-7px);
+    border-color: #555b68;
+}
+
+.pet-image {
+    height: 150px;
+    background: #191c23;
+    background-size: cover;
+    background-position: center;
+}
+
+.pet-info {
+    padding: 16px;
+}
+
+.pet-info span {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.pet-info h3 {
+    font-size: 17px;
+    margin: 7px 0;
+}
+
+.pet-info p {
+    color: #858a96;
+    font-size: 12px;
+}
+
+
+/* RARITY LABELS */
+
+.divine .pet-info span {
+    color: #ff9f43;
+}
+
+.eternal .pet-info span {
+    color: #d98cff;
+}
+
+.secret .pet-info span {
+    color: #ff4b42;
+}
+
+.cosmic .pet-info span {
+    color: #55c7ff;
+}
+
+.mythic .pet-info span {
+    color: #c084fc;
+}
+
+.legendary .pet-info span {
+    color: #ffd166;
+}
+
+.epic .pet-info span {
+    color: #b084ff;
+}
+
+.rare .pet-info span {
+    color: #4da6ff;
+}
+
+.uncommon .pet-info span {
+    color: #55d98a;
+}
+
+.common .pet-info span {
+    color: #b8bec9;
+}
+
+
+/* IMAGE FILES - WE'LL ADD THESE LATER */
+
+.divine-image {
+    background-image: url("nightflame.jpg");
+}
+
+.eternal-image {
+    background-image: url("gorilla-king.jpg");
+}
+
+.secret-image {
+    background-image: url("mutant-shark.jpg");
+}
+
+.cosmic-image {
+    background-image: url("rhinotaur.jpg");
+}
+
+.mythic-image {
+    background-image: url("bladehide.jpg");
+}
+
+.legendary-image {
+    background-image: url("spideron.jpg");
+}
+
+.epic-image {
+    background-image: url("bear.jpg");
+}
+
+.rare-image {
+    background-image: url("owl.jpg");
+}
+
+.uncommon-image {
+    background-image: url("bird.jpg");
+}
+
+.common-image {
+    background-image: url("chicken.jpg");
+}
+
+
+/* MOBILE */
+
+@media (max-width: 1100px) {
+    .rarity-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .rarity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.egg-rarity strong {
+    color: #ff3b30;
+    font-size: 38px;
+}
+
+@media (max-width: 600px) {
+
+    .egg-feature {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .egg-rarity {
+        text-align: left;
+    }
+
+}
+
+/* ============================= */
+/* EGG DATABASE */
+/* ============================= */
+
+.egg-database {
+    padding: 80px 8%;
+    background: #080808;
+}
+
+.section-label {
+    color: #888;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.egg-database h2 {
+    font-size: 38px;
+    margin: 0;
+    color: white;
+}
+
+.section-subtitle {
+    color: #888;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.egg-entry {
+    display: flex;
+    gap: 30px;
+    background: #111;
+    border: 1px solid #252525;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: 0.25s;
+}
+
+.egg-entry:hover {
+    border-color: #444;
+    transform: translateY(-3px);
+}
+
+.egg-image {
+    width: 280px;
+    min-width: 280px;
+    height: 280px;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    background-color: #181818;
+}
+
+/* Images will be added later */
+
+.angels-egg {
+    background-image: url("angels-egg.jpg");
+}
+
+.pegasus-egg {
+    background-image: url("pegasus-egg.jpg");
+}
+
+.egg-info {
+    flex: 1;
+}
+
+.egg-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.egg-title span:first-child {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.egg-title h3 {
+    color: white;
+    font-size: 27px;
+    margin: 5px 0 0;
+}
+
+.egg-tag {
+    background: #222;
+    color: white !important;
+    padding: 7px 12px;
+    border-radius: 7px;
+    font-size: 11px !important;
+    font-weight: bold;
+}
+
+.pet-table {
+    width: 100%;
+}
+
+.pet-header,
+.pet-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    align-items: center;
+    padding: 13px 15px;
+}
+
+.pet-header {
+    color: #666;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #292929;
+}
+
+.pet-row {
+    color: #ddd;
+    border-bottom: 1px solid #1f1f1f;
+    font-size: 14px;
+}
+
+.pet-row:last-child {
+    border-bottom: none;
+}
+
+.legendary {
+    color: #ffd54a;
+}
+
+.mythic {
+    color: #ff65d8;
+}
+
+.cosmic {
+    color: #b56cff;
+}
+
+.secret {
+    color: #ff4f4f;
+}
+
+.eternal {
+    color: #45d9ff;
+}
+
+.divine {
+    color: #ffffff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .egg-entry {
+        flex-direction: column;
+    }
+
+    .egg-image {
+        width: 100%;
+        min-width: 0;
+        height: 250px;
+    }
+
+    .egg-database {
+        padding: 50px 5%;
+    }
+
+    .egg-database h2 {
+        font-size: 30px;
+    }
+
+    .pet-header,
+    .pet-row {
+        grid-template-columns: 1.3fr 1fr 1fr;
+        font-size: 12px;
+        padding: 11px 8px;
+    }
+}
+
+.demon-egg {
+    background-image: url("demon-egg.jpg");
+}
+
+.fusion-egg {
+    background-image: url("fusion-egg.jpg");
+}
+
+.fusion-note {
+    color: #666;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.forest-egg {
+    background-image: url("forest-egg.jpg");
+}
+
+.lake-egg {
+    background-image: url("lake-egg.jpg");
+}
+
+.desert-egg {
+    background-image: url("desert-egg.jpg");
+}
+
+.jungle-egg {
+    background-image: url("jungle-egg.jpg");
+}
+.snow-egg {
+    background-image: url("snow-egg.jpg");
+}
+
+.volcano-egg {
+    background-image: url("volcano-egg.jpg");
+}
+
+.rare {
+    color: #4da6ff;
+}
+
+.epic {
+    color: #b56cff;
+}
+
+.abyss-egg {
+    background-image: url("abyss-egg.jpg");
+}
+
+.prehistoric-egg {
+    background-image: url("prehistoric-egg.jpg");
+}
+.cosmic-egg {
+    background-image: url("cosmic-egg.jpg");
+}
+
+.cherry-egg {
+    background-image: url("cherry-egg.jpg");
+}
+.titan-egg {
+    background-image: url("titan-egg.jpg");
+}
+
+/* ============================= */
+/* DATABASE SEARCH */
+/* ============================= */
+
+.database-controls {
+    padding: 40px 8% 10px;
+    background: #080808;
+}
+
+.database-search {
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.database-search input {
+    width: 100%;
+    height: 50px;
+    padding: 0 18px;
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+.database-search input:focus {
+    border-color: #555;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-btn {
+    background: #151515;
+    border: 1px solid #292929;
+    color: #aaa;
+    padding: 9px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: white;
+    color: black;
+    border-color: white;
+}
+
+.sort-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.sort-controls label {
+    color: #777;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.sort-controls select {
+    background: #151515;
+    border: 1px solid #292929;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ENCHANTED FOREST EGG */
+
+.enchanted-forest-egg {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(100, 190, 120, 0.18),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #101a13,
+            #17251a
+        );
+
+    border: 1px solid #315337;
+}
+
+.egg-entry:hover .enchanted-forest-egg {
+    border-color: #5b9c64;
+}
+
+/* =========================
+   REAL WORLD PROGRESSION MAP
+========================= */
+
+.world-map {
+    position: relative;
+    padding: 35px;
+    background: #0d0d0d;
+    border: 1px solid #292929;
+    border-radius: 20px;
+    overflow-x: auto;
+}
+
+.map-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.map-top strong {
+    color: #aaa;
+    font-size: 11px;
+}
+
+.map-line {
+    position: absolute;
+    left: 50%;
+    top: 95px;
+    bottom: 45px;
+    width: 2px;
+    background: #292929;
+    transform: translateX(-50%);
+}
+
+.biome {
+    position: relative;
+    width: 70%;
+    margin: 0 auto 20px;
+    padding: 20px 25px;
+    background: #121212;
+    border: 1px solid #292929;
+    border-radius: 14px;
+    z-index: 2;
+    transition: 0.25s;
+}
+
+.biome:hover {
+    border-color: #555;
+    transform: translateX(5px);
+}
+
+.biome:nth-of-type(even) {
+    transform: translateX(-5px);
+}
+
+.biome:nth-of-type(even):hover {
+    transform: translateX(-10px);
+}
+
+.biome-number {
+    color: #555;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.biome-icon {
+    font-size: 27px;
+    margin: 7px 0;
+}
+
+.biome h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.biome p {
+    color: #aaa;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.biome small {
+    color: #666;
+    font-size: 11px;
+}
+
+.new-biome {
+    border-color: #365c3b;
+    background: linear-gradient(
+        135deg,
+        #101810,
+        #111
+    );
+}
+
+.new-biome .biome-number {
+    color: #72d17d;
+}
+
+.new-biome h3 {
+    color: #8bd994;
+}
+
+@media (max-width: 800px) {
+
+    .world-map {
+        padding: 20px 12px;
+    }
+
+    .map-top strong {
+        display: none;
+    }
+
+    .map-line {
+        left: 27px;
+        top: 80px;
+    }
+
+    .biome,
+    .biome:nth-of-type(even) {
+        width: calc(100% - 25px);
+        margin-left: 25px;
+        transform: none;
+    }
+
+    .biome:hover,
+    .biome:nth-of-type(even):hover {
+        transform: translateX(3px);
+    }
+}
+
+/* =========================
+   TRENDING GAMES
+========================= */
+
+.trending-games {
+    padding: 80px 8%;
+    background: #080808;
+}
+
+.trending-games .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.trending-games .section-title h2 {
+    color: white;
+    font-size: 38px;
+    margin: 0;
+}
+
+.trending-games .view-all {
+    color: #888;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.trending-games .view-all:hover {
+    color: white;
+}
+
+
+/* GAME GRID */
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+/* GAME CARD */
+
+.game-card {
+    position: relative;
+
+    background: #111;
+
+    border: 1px solid #252525;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #444;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+
+/* GAME IMAGE */
+
+.game-image {
+    width: 100%;
+    height: 210px;
+
+    background-size: cover;
+    background-position: center;
+
+    background-color: #181818;
+
+    position: relative;
+}
+
+
+/* DARK IMAGE OVERLAY */
+
+.game-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.65),
+            transparent 55%
+        );
+}
+
+
+/* RANK */
+
+.game-card > span {
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    z-index: 2;
+
+    background: rgba(0, 0, 0, 0.8);
+
+    border: 1px solid #333;
+
+    color: white;
+
+    padding: 7px 10px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+}
+
+
+/* CARD TEXT */
+
+.game-card h3 {
+    color: white;
+
+    font-size: 20px;
+
+    margin: 18px 18px 6px;
+
+    letter-spacing: -0.5px;
+}
+
+.game-card p {
+    color: #72d17d;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin: 0 18px 20px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .trending-games {
+        padding: 60px 5%;
+    }
+
+    .trending-games .section-title h2 {
+        font-size: 30px;
+    }
+
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-image {
+        height: 220px;
+    }
+
+}
+
+.enchanted-forest-egg {
+    background-image: url("enchanted-forest.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.biome-icon img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.biome-icon img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.enchanted .biome-icon img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
